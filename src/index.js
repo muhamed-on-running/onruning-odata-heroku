@@ -8,9 +8,11 @@ app.get('/', (req, res) => {
     res.send('Welcome to Edurekas REST API with Node.js Tutorial!!');
     });
 
-app.get('/odata', function(req, res){
+app.get('/odata/\\$metadata', function(req, res){
     res.contentType('application/xml');
     res.sendFile(path.join(__dirname , 'Metadata/metadata.xml'));
 });
+
+
 
 app.listen(port, () => console.log(`Listening on port ${port}..`));

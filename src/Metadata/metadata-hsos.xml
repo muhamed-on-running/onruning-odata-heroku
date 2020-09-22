@@ -711,8 +711,7 @@
           <EntitySet Name="HSOBSSalesInvoiceHeaders" EntityType="Microsoft.Dynamics.DataEntities.HSOBSSalesInvoiceHeader" />
     
           <EntitySet Name="HSOBSSalesOrderDeliveryNoteLines" EntityType="Microsoft.Dynamics.DataEntities.HSOBSSalesOrderDeliveryNoteLine" />
-        </EntityContainer>
-      </edmx:DataServices>  
+        </EntityContainer> 
     </Schema>    
   </edmx:DataServices>
 </edmx:Edmx>

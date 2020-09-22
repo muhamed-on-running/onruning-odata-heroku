@@ -1000,6 +1000,11 @@
         <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@SYS4363" />
         <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
       </EntityType>
+      <EntityContainer Name="Resources">
+      <EntitySet Name="SalesOrderHeaders" EntityType="Microsoft.Dynamics.DataEntities.SalesOrderHeader">            
+      </EntitySet>
+    </EntityContainer>
+
 </Schema>
 </edmx:DataServices>
 </edmx:Edmx>

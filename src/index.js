@@ -13,9 +13,14 @@ app.get('/odata/\\$metadata', function(req, res){
     res.sendFile(path.join(__dirname , 'Metadata/metadata-single.xml'));
 });
 
+// app.get('/odata/hsos/\\$metadata', function(req, res){
+//     res.contentType('application/xml');
+//     res.sendFile(path.join(__dirname , 'Metadata/metadata-short.xml'));
+// });
+
 app.get('/odata/hsos/\\$metadata', function(req, res){
     res.contentType('application/xml');
-    res.sendFile(path.join(__dirname , 'Metadata/metadata-short.xml'));
+    res.sendFile(path.join(__dirname , 'Metadata/metadata-short-oneway.xml'));
 });
 
 

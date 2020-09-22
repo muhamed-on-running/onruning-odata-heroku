@@ -28,6 +28,10 @@ app.get('/odata/entities/\\$metadata', function(req, res){
     res.sendFile(path.join(__dirname , 'Metadata/metadata-hso-entities.xml'));
 });
 
+app.get('/odata/hsoentities/\\$metadata', function(req, res){
+    res.contentType('application/xml');
+    res.sendFile(path.join(__dirname , 'Metadata/metadata-hso-entities.xml'));
+});
 
 
 app.listen(port, () => console.log(`Listening on port ${port}..`));

@@ -25,7 +25,7 @@ app.get('/odata/hsos/\\$metadata', function(req, res){
 
 app.get('/odata/entities/\\$metadata', function(req, res){
     res.contentType('application/xml');
-    res.sendFile(path.join(__dirname , 'Metadata/metadata-hso-entities.xml'));
+    res.sendFile(path.join(__dirname , 'Metadata/metadata-hsos.xml'));
 });
 
 app.get('/odata/hsoentities/\\$metadata', function(req, res){

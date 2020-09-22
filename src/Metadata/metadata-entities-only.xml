@@ -713,6 +713,7 @@
     
           <EntitySet Name="HSOBSSalesOrderDeliveryNoteLines" EntityType="Microsoft.Dynamics.DataEntities.HSOBSSalesOrderDeliveryNoteLine" />
         </EntityContainer>
+      </edmx:DataServices>  
     </Schema>
     <Schema Namespace="Microsoft.Dynamics.OData.Core.V1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
       <EnumType Name="AXType">

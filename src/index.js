@@ -23,6 +23,11 @@ app.get('/odata/hsos/\\$metadata', function(req, res){
     res.sendFile(path.join(__dirname , 'Metadata/metadata-short-oneway.xml'));
 });
 
+app.get('/odata/entities/\\$metadata', function(req, res){
+    res.contentType('application/xml');
+    res.sendFile(path.join(__dirname , 'Metadata/metadata-entities-only.xml'));
+});
+
 
 
 app.listen(port, () => console.log(`Listening on port ${port}..`));

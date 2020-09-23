@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0"
+    xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:DataServices>
+        <Schema Namespace="Microsoft.Dynamics.DataEntities"
+            xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityType Name="HSOBSSalesOrderDeliveryNoteHeader">
+                <Key>
+                    <PropertyRef Name="dataAreaId" />
+                    <PropertyRef Name="SalesOrderNumber" />
+                </Key>
+                <Property Name="dataAreaId" Type="Edm.String" Nullable="false">
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@SYS13342" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AXType">
+                        <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/String</EnumMember>
+                    </Annotation>
+                </Property>
+                <Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false">
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@SYS9694" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.IsRequired" Bool="true" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AXType">
+                        <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/String</EnumMember>
+                    </Annotation>
+                </Property>
+                <Property Name="PackingSlipNumber" Type="Edm.String">
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@SYS11549" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AXType">
+                        <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/String</EnumMember>
+                    </Annotation>
+                </Property>
+                <Property Name="ShipCarrierServiceId" Type="Edm.String">
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@TRX197" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AXType">
+                        <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/String</EnumMember>
+                    </Annotation>
+                </Property>
+                <Property Name="SalesDeliveryDate" Type="Edm.DateTimeOffset" Nullable="false">
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@SYS10178" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AXType">
+                        <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/Date</EnumMember>
+                    </Annotation>
+                </Property>
+                <Property Name="DeliveryTermsCode" Type="Edm.String">
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@SYS5280" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AXType">
+                        <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/String</EnumMember>
+                    </Annotation>
+                </Property>
+                <Property Name="ShipCarrierId" Type="Edm.String">
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@TRX331" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AXType">
+                        <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/String</EnumMember>
+                    </Annotation>
+                </Property>
+                <Property Name="LegalEntity" Type="Edm.String">
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="Company" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.HelpTextId" String="ID for an area of data" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AllowEdit" Bool="false" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AllowEditOnCreate" Bool="false" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AXType">
+                        <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/String</EnumMember>
+                    </Annotation>
+                </Property>
+                <Property Name="ReturnPackingSlipNumber" Type="Edm.String">
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@SYS117694" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AXType">
+                        <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/String</EnumMember>
+                    </Annotation>
+                </Property>
+                <Property Name="DeliveryModeCode" Type="Edm.String">
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@SYS210" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
+                    <Annotation Term="Microsoft.Dynamics.OData.Core.V1.AXType">
+                        <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/String</EnumMember>
+                    </Annotation>
+                </Property>
+                <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@HSO_BS08DeNo:DeliveryNoteHeaders" />
+                <Annotation Term="Microsoft.Dynamics.OData.Core.V1.IsReadOnly" Bool="true" />
+                <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
+            </EntityType>
+
+            <EntityContainer Name="Resources">
+                <EntitySet Name="HSOBSSalesOrderDeliveryNoteHeaders" EntityType="Microsoft.Dynamics.DataEntities.HSOBSSalesOrderDeliveryNoteHeader" />
+            </EntityContainer>
+        </Schema>
+
+        <Schema Namespace="Microsoft.Dynamics.OData.Core.V1"
+            xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EnumType Name="AXType">
+                <Member Name="Container" Value="0" />
+                <Member Name="Date" Value="1" />
+                <Member Name="Enum" Value="2" />
+                <Member Name="Guid" Value="3" />
+                <Member Name="Int32" Value="4" />
+                <Member Name="Int64" Value="5" />
+                <Member Name="Real" Value="6" />
+                <Member Name="Record" Value="7" />
+                <Member Name="String" Value="8" />
+                <Member Name="Time" Value="9" />
+                <Member Name="UtcDateTime" Value="10" />
+                <Member Name="Void" Value="11" />
+            </EnumType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

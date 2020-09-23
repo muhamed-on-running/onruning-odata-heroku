@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0"
+  xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
   <edmx:DataServices>
-    <Schema Namespace="Microsoft.Dynamics.DataEntities" xmlns="http://docs.oasis-open.org/odata/ns/edm">  
+    <Schema Namespace="Microsoft.Dynamics.DataEntities"
+      xmlns="http://docs.oasis-open.org/odata/ns/edm">
       <EntityType Name="HSOSalesOrderHeader">
         <Key>
           <PropertyRef Name="dataAreaId" />
@@ -225,7 +228,7 @@
             <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/String</EnumMember>
           </Annotation>
         </Property>
-        <NavigationProperty Name="SalesOrderLines" Type="Collection(Microsoft.Dynamics.DataEntities.HSOSalesOrderLine)" Partner="SalesOrderHeader">
+        <NavigationProperty Name="SalesOrderLines" Type="Collection(Microsoft.Dynamics.DataEntities.HSOSalesOrderLine)">
           <ReferentialConstraint Property="SalesId" ReferencedProperty="SalesId" />
           <ReferentialConstraint Property="dataAreaId" ReferencedProperty="dataAreaId" />
         </NavigationProperty>
@@ -395,13 +398,13 @@
             <EnumMember>Microsoft.Dynamics.OData.Core.V1.AXType/String</EnumMember>
           </Annotation>
         </Property>
-        <NavigationProperty Name="SalesOrderHeader" Type="Microsoft.Dynamics.DataEntities.HSOSalesOrderHeader" Nullable="false" Partner="SalesOrderLines">
+        <NavigationProperty Name="SalesOrderHeader" Type="Microsoft.Dynamics.DataEntities.HSOSalesOrderHeader" Nullable="false">
           <ReferentialConstraint Property="SalesId" ReferencedProperty="SalesId" />
           <ReferentialConstraint Property="dataAreaId" ReferencedProperty="dataAreaId" />
         </NavigationProperty>
         <Annotation Term="Microsoft.Dynamics.OData.Core.V1.LabelId" String="@HSO_BS05SOC:SalesOrderLineEntity" />
         <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
-      </EntityType>      
+      </EntityType>
       <EntityType Name="HSOBSSalesOrderDeliveryNoteLine">
         <Key>
           <PropertyRef Name="dataAreaId" />
@@ -696,25 +699,26 @@
         <Annotation Term="Microsoft.Dynamics.OData.Core.V1.IsReadOnly" Bool="true" />
         <Annotation Term="Microsoft.Dynamics.OData.Core.V1.ConfigurationKeyEnabled" Bool="true" />
       </EntityType>
-      
+
       <EntityContainer Name="Resources">
-        <EntitySet Name="HSOSalesOrderHeaders" EntityType="Microsoft.Dynamics.DataEntities.HSOSalesOrderHeader">                       
+        <EntitySet Name="HSOSalesOrderHeaders" EntityType="Microsoft.Dynamics.DataEntities.HSOSalesOrderHeader">
           <NavigationPropertyBinding Path="SalesOrderLines" Target="HSOSalesOrderLines" />
-        </EntitySet>    
-  
+        </EntitySet>
+
         <EntitySet Name="HSOSalesOrderLines" EntityType="Microsoft.Dynamics.DataEntities.HSOSalesOrderLine">
           <NavigationPropertyBinding Path="SalesOrderHeader" Target="HSOSalesOrderHeaders" />
         </EntitySet>
-        
-        <EntitySet Name="HSOBSSalesOrderDeliveryNoteHeaders" EntityType="Microsoft.Dynamics.DataEntities.HSOBSSalesOrderDeliveryNoteHeader" />   
-  
+
+        <EntitySet Name="HSOBSSalesOrderDeliveryNoteHeaders" EntityType="Microsoft.Dynamics.DataEntities.HSOBSSalesOrderDeliveryNoteHeader" />
+
         <EntitySet Name="HSOBSSalesInvoiceHeaders" EntityType="Microsoft.Dynamics.DataEntities.HSOBSSalesInvoiceHeader" />
-  
+
         <EntitySet Name="HSOBSSalesOrderDeliveryNoteLines" EntityType="Microsoft.Dynamics.DataEntities.HSOBSSalesOrderDeliveryNoteLine" />
       </EntityContainer>
     </Schema>
-    
-    <Schema Namespace="Microsoft.Dynamics.OData.Core.V1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+
+    <Schema Namespace="Microsoft.Dynamics.OData.Core.V1"
+      xmlns="http://docs.oasis-open.org/odata/ns/edm">
       <EnumType Name="AXType">
         <Member Name="Container" Value="0" />
         <Member Name="Date" Value="1" />

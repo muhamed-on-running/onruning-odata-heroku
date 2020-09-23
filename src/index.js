@@ -4,40 +4,33 @@ const fs = require('fs')
 const port = process.env.PORT || 5005;
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Welcome to Edurekas REST API with Node.js Tutorial!!');
-    });
+//Index
+app.get('/', (req, res) => 
+    res.sendFile(path.join(__dirname+'/pages/index.html'))
+);
 
-app.get('/odata/\\$metadata', function(req, res){
-    res.contentType('application/xml');
-    res.sendFile(path.join(__dirname , 'Metadata/metadata-single.xml'));
-});
+//Sales order header and Sales order line 
+app.get('/odata/sohs/\\$metadata', (req, res) => 
+    res.sendFile(path.join(__dirname, 'xml/metadata/soh-only.xml'))
+);
 
-// app.get('/odata/hsos/\\$metadata', function(req, res){
-//     res.contentType('application/xml');
-//     res.sendFile(path.join(__dirname , 'Metadata/metadata-short.xml'));
-// });
+app.get('/odata/sohs-hsos/\\$metadata', (req, res) => 
+    res.sendFile(path.join(__dirname, 'xml/metadata/soh-hso.xml'))
+);
 
-app.get('/odata/hsos/\\$metadata', function(req, res){
-    res.contentType('application/xml');
-    res.sendFile(path.join(__dirname , 'Metadata/metadata-short-oneway.xml'));
-});
+//HSOs with partner attribute in NavigationProperty
+app.get('/odata/hsos/partner/\\$metadata', (req, res) => 
+    res.sendFile(path.join(__dirname, 'xml/metadata/hsos-partner.xml'))
+);
 
-app.get('/odata/entities/\\$metadata', function(req, res){
-    res.contentType('application/xml');
-    res.sendFile(path.join(__dirname , 'Metadata/metadata-hsos.xml'));
-});
+//HSOs without partner attribute in NavigationProperty
+app.get('/odata/hsos/nopartner/\\$metadata', (req, res) => 
+    res.sendFile(path.join(__dirname, 'xml/metadata/hsos-only.xml'))
+);
 
-//Sales order header only
-app.get('/odata/soh/\\$metadata', function(req, res){
-    res.contentType('application/xml');
-    res.sendFile(path.join(__dirname , 'Metadata/metadata-soh.xml'));
-});
-
-app.get('/odata/hsoentities/\\$metadata', function(req, res){
-    res.contentType('application/xml');
-    res.sendFile(path.join(__dirname , 'Metadata/metadata-hso-entities.xml'));
-});
-
+//Single HSO with no relations
+app.get('/odata/hso/\\$metadata', (req, res) => 
+    res.sendFile(path.join(__dirname, 'xml/metadata/hso-single.xml'))
+);
 
 app.listen(port, () => console.log(`Listening on port ${port}..`));

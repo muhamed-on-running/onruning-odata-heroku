@@ -2098,15 +2098,32 @@
           </Collection>
         </Annotation>
       </EntityType>
-      
+
       <EntityContainer Name="Resources">
         <EntitySet Name="SalesOrderHeaders" EntityType="Microsoft.Dynamics.DataEntities.SalesOrderHeader">
           <NavigationPropertyBinding Path="SalesOrderLine" Target="SalesOrderLines" />
         </EntitySet>
         <EntitySet Name="SalesOrderLines" EntityType="Microsoft.Dynamics.DataEntities.SalesOrderLine">
           <NavigationPropertyBinding Path="SalesOrderHeader" Target="SalesOrderHeaders" />
-        </EntitySet>        
+        </EntitySet>
       </EntityContainer>
+    </Schema>
+    <Schema Namespace="Microsoft.Dynamics.OData.Core.V1"
+      xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EnumType Name="AXType">
+        <Member Name="Container" Value="0" />
+        <Member Name="Date" Value="1" />
+        <Member Name="Enum" Value="2" />
+        <Member Name="Guid" Value="3" />
+        <Member Name="Int32" Value="4" />
+        <Member Name="Int64" Value="5" />
+        <Member Name="Real" Value="6" />
+        <Member Name="Record" Value="7" />
+        <Member Name="String" Value="8" />
+        <Member Name="Time" Value="9" />
+        <Member Name="UtcDateTime" Value="10" />
+        <Member Name="Void" Value="11" />
+      </EnumType>
     </Schema>
   </edmx:DataServices>
 </edmx:Edmx>

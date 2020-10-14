@@ -2,7 +2,11 @@ const express = require('express');
 const path = require('path')
 const fs = require('fs')
 const port = process.env.PORT || 5005;
+const bodyParser = require('body-parser');
 const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Index
 app.get('/', (req, res) => 
@@ -31,6 +35,19 @@ app.get('/odata/hsos/nopartner/\\$metadata', (req, res) =>
 //Single HSO with no relations
 app.get('/odata/hso/\\$metadata', (req, res) => 
     res.sendFile(path.join(__dirname, 'xml/metadata/hso-single.xml'))
+);
+
+app.get('/json/data', (req, res) => 
+    { 
+        console.log(path.join(__dirname, 'json/example.json'));
+        fs.readFile(path.join(__dirname, 'json/example.json'), 'utf8', (err, data) => {
+            if (err) {
+            throw err;
+            }
+
+            res.send(JSON.parse(data));
+        })
+    }
 );
 
 app.listen(port, () => console.log(`Listening on port ${port}..`));

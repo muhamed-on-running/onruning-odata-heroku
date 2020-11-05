@@ -37,6 +37,14 @@ app.get('/odata/hso/\\$metadata', (req, res) =>
     res.sendFile(path.join(__dirname, 'xml/metadata/hso-single.xml'))
 );
 
+app.get('/external/metadata/\\$metadata', (req, res) => 
+    res.sendFile(path.join(__dirname, 'xml/metadata/external-metadata-example.xml'))
+);
+
+app.get('/external/metadata/Categorys', (req, res) => 
+    res.sendFile(path.join(__dirname, 'xml/metadata/external-metadata-example.xml'))
+);
+
 app.get('/json/data', (req, res) => 
     { 
         console.log(path.join(__dirname, 'json/example.json'));

@@ -1,0 +1,8 @@
+<service xmlns="http://www.w3.org/2007/app" xmlns:atom="http://www.w3.org/2005/Atom" xml:base="https://odata-metadata-test.herokuapp.com/external/metadata.svc/">
+    <workspace>
+        <atom:title>Default</atom:title>
+        <collection href="Categorys">
+            <atom:title>Categorys</atom:title>
+        </collection>
+    </workspace>
+</service>

@@ -1,23 +1,14 @@
-<service xmlns="http://www.w3.org/2007/app" xmlns:atom="http://www.w3.org/2005/Atom" xml:base="http://orderdb.herokuapp.com:80/orders.svc/">
-    <workspace>
-        <atom:title>Default</atom:title>
-        <collection href="OrderDetails">
-            <atom:title>OrderDetails</atom:title>
-        </collection>
-        <collection href="Categorys">
-            <atom:title>Categorys</atom:title>
-        </collection>
-        <collection href="Payments">
-            <atom:title>Payments</atom:title>
-        </collection>
-        <collection href="Orders">
-            <atom:title>Orders</atom:title>
-        </collection>
-        <collection href="PaymentMechanisms">
-            <atom:title>PaymentMechanisms</atom:title>
-        </collection>
-        <collection href="Subcategorys">
-            <atom:title>Subcategorys</atom:title>
-        </collection>
-    </workspace>
-</service>
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+        <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="default">            
+            <EntityType Name="Category">
+                <Key>
+                    <PropertyRef Name="categoryID" />
+                </Key>
+                <Property Name="categoryID" Type="Edm.String" Nullable="false" MaxLength="255" />
+                <Property Name="categoryName" Type="Edm.String" Nullable="true" MaxLength="255" />
+                <Property Name="categoryTestField" Type="Edm.String" Nullable="true" MaxLength="255" />
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,17 @@
+{
+    "odata.metadata":"https://odata-metadata-test.herokuapp.com/external/metadata.svc/$metadata#Categorys",
+    "odata.count":"2",
+    "value":
+    [
+        {
+          "categoryID":1,
+          "categoryName":"Test",
+          "categoryTestField":"AAAA"
+        },
+        {
+            "categoryID":1,
+            "categoryName":"Test",
+            "categoryTestField":"AAAA"
+          }
+    ]
+}

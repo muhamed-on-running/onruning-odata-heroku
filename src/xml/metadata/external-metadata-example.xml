@@ -1,6 +1,6 @@
 <edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
     <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
-        <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="default">            
+        <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="default">
             <EntityType Name="Category">
                 <Key>
                     <PropertyRef Name="categoryID" />
@@ -11,4 +11,7 @@
             </EntityType>
         </Schema>
     </edmx:DataServices>
+    <EntityContainer Name="defaultContainer" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Categorys" EntityType="default.Category" />
+    </EntityContainer>
 </edmx:Edmx>

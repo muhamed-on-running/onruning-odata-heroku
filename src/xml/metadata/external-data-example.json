@@ -1,12 +1,12 @@
 [
   {
-    "categoryID": 1,
+    "categoryID": "1",
     "categoryName": "Test",
     "categoryTestField": "AAAA"
   },
   {
-    "categoryID": 1,
-    "categoryName": "Test",
-    "categoryTestField": "AAAA"
+    "categoryID": "2",
+    "categoryName": "Test 2",
+    "categoryTestField": "AAAA 2"
   }
 ]

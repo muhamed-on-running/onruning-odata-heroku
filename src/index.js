@@ -97,10 +97,10 @@ app.get('/example/service/Dummies', (req, res) => {
         var query = url_parts.query.$filter;
         if(query) {
             if (query.includes('1')) {
-                res.sendFile(path.join(__dirname, 'odata/firstItem.json'));
+                res.sendFile(path.join(__dirname, 'odata/firstItemFilter.json'));
             }
             else if (query.includes('2')) {
-                res.sendFile(path.join(__dirname, 'odata/secondItem.json'))
+                res.sendFile(path.join(__dirname, 'odata/secondItemFilter.json'))
             }
             else {
                 res.sendFile(path.join(__dirname, 'odata/setList.json'))

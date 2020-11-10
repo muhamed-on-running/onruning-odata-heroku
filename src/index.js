@@ -82,4 +82,23 @@ app.get('/json/data', (req, res) =>
     }
 );
 
+/*****************/
+/* new endpoints */
+app.get('/example/service/\\$metadata', (req, res) => 
+    res.sendFile(path.join(__dirname, 'odata/metadata.xml'))
+);
+//example/service
+app.get('/example/service/Dummies', (req, res) => 
+    res.sendFile(path.join(__dirname, 'odata/setList.json'))
+);
+
+app.get('/example/service/Dummies[(]1[)]', (req, res) => 
+    res.sendFile(path.join(__dirname, 'odata/firstItem.json'))
+);
+
+app.get('/example/service/Dummies[(]2[)]', (req, res) => 
+    res.sendFile(path.join(__dirname, 'odata/secondItem.json'))
+);
+
+
 app.listen(port, () => console.log(`Listening on port ${port}..`));

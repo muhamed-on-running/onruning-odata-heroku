@@ -1,0 +1,7 @@
+{
+    "@odata.context": "https://odata-metadata-test.herokuapp.com/example/service/$metadata#Dummy/$entity",
+    "@odata.id": "https://odata-metadata-test.herokuapp.com/example/service/Dummies(2)",
+    "Id": 2,
+    "Name": "Second",
+    "Description": "Description second"
+}

@@ -5,7 +5,7 @@
         {
             "@odata.id": "https://odata-metadata-test.herokuapp.com/example/service/Dummies(1)",
             "Id": 1,
-            "Name": "First",
+            "Name": "First Edited",
             "Description": "Description first"
         },
         {

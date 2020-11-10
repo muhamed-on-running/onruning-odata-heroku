@@ -1,12 +1,10 @@
 {
-  "odata.metadata": "https://odata-metadata-test.herokuapp.com/external/metadata.svc/$metadata#Categorys",
-  "@odata.deltaLink": "https://odata-metadata-test.herokuapp.com/external/metadata.svc/Categorys",
-  "odata.count": "2",
+  "@odata.deltaLink": "https://odata-metadata-test.herokuapp.com/external/metadata.svc/Categorys",  
   "value": [
     {
       "categoryID": "1",
       "categoryName": "Test",
-      "categoryTestField": "AAAA"
+      "categoryTestField": "BBBB"
     },
     {
       "categoryID": "2",

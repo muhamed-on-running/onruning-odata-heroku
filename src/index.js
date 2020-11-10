@@ -84,6 +84,10 @@ app.get('/json/data', (req, res) =>
 
 /*****************/
 /* new endpoints */
+https://odata-metadata-test.herokuapp.com/example/service/
+app.get('/example/service/', (req, res) => 
+    res.sendFile(path.join(__dirname, 'odata/service.json'))
+);
 app.get('/example/service/\\$metadata', (req, res) => 
     res.sendFile(path.join(__dirname, 'odata/metadata.xml'))
 );

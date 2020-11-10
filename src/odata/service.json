@@ -1,0 +1,10 @@
+{
+    "@odata.context": "https://odata-metadata-test.herokuapp.com/example/service/$metadata",
+    "value": [
+        {
+            "name": "Dummies",
+            "kind": "EntitySet",
+            "url": "Dummies"
+        }
+    ]
+}

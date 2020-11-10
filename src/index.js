@@ -63,7 +63,8 @@ app.get('/external/metadata.svc/Categorys', (req, res) =>
             if (err) {
             throw err;
             }
-            res.setHeader("Prefer: odata.track-changes", "https://odata-metadata-test.herokuapp.com/external/metadata.svc/Categorys")
+            res.setHeader("Prefer", "odata.track-changes")
+            res.setHeader("url", "https://odata-metadata-test.herokuapp.com/external/metadata.svc/Categorys")
             res.send(JSON.parse(data));
         })
     }

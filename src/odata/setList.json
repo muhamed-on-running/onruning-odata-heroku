@@ -1,5 +1,6 @@
 {
     "@odata.context": "https://odata-metadata-test.herokuapp.com/example/service/$metadata#Dummy",
+    "@odata.deltaLink": "https://odata-metadata-test.herokuapp.com/example/service/Dummies",
     "value": [
         {
             "@odata.id": "https://odata-metadata-test.herokuapp.com/example/service/Dummies(1)",

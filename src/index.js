@@ -82,7 +82,6 @@ app.get('/json/data', (req, res) => {
 
 /*****************/
 /* new endpoints */
-https://odata-metadata-test.herokuapp.com/example/service/
 app.get('/example/service/', (req, res) =>
     res.sendFile(path.join(__dirname, 'odata/service.json'))
 );
@@ -103,9 +102,11 @@ app.get('/example/service/Dummies', (req, res) => {
                 res.sendFile(path.join(__dirname, 'odata/secondItemFilter.json'))
             }
             else {
+                res.setHeader("Preference-Applied", "odata.track-changes")
                 res.sendFile(path.join(__dirname, 'odata/setList.json'))
             }
         } else {
+            res.setHeader("Preference-Applied", "odata.track-changes")
             res.sendFile(path.join(__dirname, 'odata/setList.json'))
         }
       }
@@ -121,6 +122,20 @@ app.get('/example/service/Dummies[(]1[)]', (req, res) =>
 app.get('/example/service/Dummies[(]2[)]', (req, res) =>
     res.sendFile(path.join(__dirname, 'odata/secondItem.json'))
 );
+
+app.get('/example/update', (req, res) => {
+    var url = require('url');
+    console.log("in");
+    // read file and make object
+    let content = JSON.parse(fs.readFileSync(path.join(__dirname,'odata/setList.json')));
+    var url_parts = url.parse(req.url, true);
+    let old = content.value[0].Name;
+    console.log(old);
+    var name = url_parts.query.name
+    content.value[0].Name = old + name;
+    fs.writeFileSync(path.join(__dirname,'odata/setList.json'), JSON.stringify(content, null, 2))
+    res.send('OK');
+})
 
 
 app.listen(port, () => console.log(`Listening on port ${port}..`));
